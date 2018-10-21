@@ -90,9 +90,10 @@
   float: none;
 }
 .booking-container .grid-container .equipments-field .equipments-wrapper {
-  max-height: 200px;
+  max-height: 250px;
   overflow-y: auto;
   padding-right: 10px;
+  margin-bottom: 10px;
 }
 .booking-container .grid-container .equipments-field .equipments-wrapper::-webkit-scrollbar {
   width: 6px;
@@ -142,6 +143,9 @@
   font-size: 0.7857142857142857rem;
 }
 @media only screen and (max-device-width: 679px) {
+  .booking-container tbody {
+    max-height: 440px;
+  }
   .booking-container .grid-container {
     display: block;
   }

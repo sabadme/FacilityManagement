@@ -78,42 +78,59 @@
                 <label>Select Equipment(s)</label>
                    <input type="text" id="Search" onkeyup="myFunction()" placeholder="Search" class="search">
                 <div class="equipments-wrapper">
-                    <?php
-                    include "admin/connection.php";
-                    
-                    if (!empty('div')){
-                    $equipment_sql = mysql_query("SELECT * FROM equipment ORDER BY id desc");
-                    while ($data_equipment = mysql_fetch_array($equipment_sql)) {   
-                        $status=$data_equipment['status'];
-                        $equipment_name=$data_equipment['equipment_name'];
+                    <table id="myTable">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Code</th>
+                                <th>Registered</th>
+                                <th>Expired</th>
+                                <th>Action</th>
 
-                        $get_equipment=mysql_query("SELECT * FROM booking WHERE equipment='$equipment_name'");
-                        $data_GETequipment=mysql_fetch_array($get_equipment);
-                        $get_equipmentNAME=$data_GETequipment['equipment'];
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            include "admin/connection.php";
 
-                        if($status=="Unassigned" && $get_equipmentNAME != $equipment_name){
+                            if (!empty('div')){
+                            $equipment_sql = mysql_query("SELECT * FROM equipment ORDER BY id desc");
+                            while ($data_equipment = mysql_fetch_array($equipment_sql)) {
+                                $status=$data_equipment['status'];
+                                $equipment_name=$data_equipment['equipment_name'];
+
+                                $get_equipment=mysql_query("SELECT * FROM booking WHERE equipment='$equipment_name'");
+                                $data_GETequipment=mysql_fetch_array($get_equipment);
+                                $get_equipmentNAME=$data_GETequipment['equipment'];
+
+                                if($status=="Unassigned" && $get_equipmentNAME != $equipment_name){
 
 
-                        ?>
-                        <div class="target">
-                            <input type="checkbox" name="equipment[]" id="<?php echo $data_equipment['id']; ?>" value="<?php echo $data_equipment['id']; ?>"/>
-                            <label for="<?php echo $data_equipment['id']; ?>"><?php echo $data_equipment['equipment_name']; ?></label> 
-                            
-                            
-                            
-                        </div>
+                                ?>
+                                <tr>
+                                    <td data-th="Name"><?php echo $data_equipment['equipment_name'];?></td>
+                                    <td data-th="QR ID"><?php echo $data_equipment['equipment_code'];?></td>
+                                    <td data-th="Date Start"><?php echo $data_equipment['equipment_start'];?></td>
+                                    <td data-th="Date"><?php echo $data_equipment['equipment_end'];?></td>
+                                    <td data-th="Action"><input type="checkbox" name="equipment[]" id="<?php echo $data_equipment['id']; ?>" value="<?php echo $data_equipment['id']; ?>"/></td>
+                                </tr>
 
-                        <?php
-                    }
 
-                    }
-                    }else {
-                        echo "sdadsd";
-                    }
 
-                    
 
-                    ?>
+                                <?php
+                            }
+
+                            }
+                            }else {
+                                echo "sdadsd";
+                            }
+
+
+
+                            ?>
+                            </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -125,7 +142,7 @@
             </form>
             </div>
 
-        <div class="booking-table">
+        <!-- <div class="booking-table">
             <strong class="subtitle">Booking Information</strong>
             <div class="table-container" id="wrapper">
                 <table>
@@ -142,11 +159,11 @@
                     </thead>
 
                     <tbody>
-                    <?php include"teacher/booking_table.php"; ?>
+                    <?php //include"teacher/booking_table.php"; ?>
                     </tbody>
                 </table>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 

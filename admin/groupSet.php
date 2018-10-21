@@ -52,10 +52,16 @@
                                 <option>OF</option>
                             </select>
 
-                             <div>
-                    <input type="radio" name="highANDlow" value="High Priority"><span>High Priority</span></input>
-                    <input type="radio" name="highANDlow" value="Low Priority"><span>Low Priority</span></input>
-                    </div>
+                             <div class="radioContainer">
+                                <div>
+                                    <input type="radio" name="highANDlow" value="High Priority"></input>
+                                    <span>High Priority</span>
+                                </div>
+                                <div>
+                                    <input type="radio" name="highANDlow" value="Low Priority"></input>
+                                    <span>Low Priority</span>
+                                </div>
+                            </div>  
                     
                         </div>
 
@@ -79,13 +85,11 @@
             <div class="table-container" id="wrapper">
                 <table id='myTable'>
                     <thead>
-                    <th>Code</th>
                     <th>Name</th>
-                    <th>Type</th>
+                    <th>Code</th>                    
                     <th>Quantity</th>
                     <th>Registered</th>
-                    <th>Expiration</th>
-                    <th></th>
+                    <th>Expiration</th>                    
                     <th></th>
                     </thead>
 

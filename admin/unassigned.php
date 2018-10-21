@@ -56,7 +56,7 @@
                     </div>
                     <table id='myTable'>
                         <thead>
-                        <th></th>
+                        <th>Image</th>
                         <th>Name</th>
                         <th>Status</th>
                         </thead>
@@ -71,13 +71,13 @@
                             $image_filename = $data_image['equipment_filename'];
                             ?>
                             <tr>
-                                <td><?php echo "<img style='width: 50px; height: 50px' src='EquipmentPicture/" . $image_filename . "'>" ?></td>
-                                <td>
+                                <td data-th="Image"><?php echo "<img style='width: 150px;' src='EquipmentPicture/" . $image_filename . "'>" ?></td>
+                                <td data-th="Equipment">
                                     <form action="" method="POST">
                                         <button class="equipment-name" title="<?php echo $data_image['equipment_name']; ?>" name="equipmentPage"  value="<?php echo $data_image['id']; ?>"><?php echo $data_image['equipment_name']; ?></button>
                                     </form>
                                 </td>
-                                <td><?php echo $image_status; ?></td>
+                                <td data-th="Status"><?php echo $image_status; ?></td>
                             </tr>
                             <?php
 

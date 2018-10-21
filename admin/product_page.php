@@ -44,10 +44,10 @@ if($image==$file_name){
             <table>
                 <thead>
                     <tr>
-                        <th></th>
-                        <th>Name</th>
-                        <th>Date Start</th>
-                        <th>Date End</th>
+                        <th data-th="Image"></th>
+                        <th data-th="Name">Name</th>
+                        <th data-th="Date Start">Date Start</th>
+                        <th data-th="Date End">Date End</th>
                     </tr>
                 </thead>
                 <tbody>

@@ -8,28 +8,14 @@
 
             <div class="notifs-wrapper">
                 <strong>Notifications</strong>
-
-                <table id="myTable">
-                    <thead>
-                        <th>Name</th>
-                        <th>Equipment</th>
-                        <th>Message</th>
-                    </thead>    
-
-                    <tbody>
-                        <?php include"admin/viewreport_table.php"; ?>
-                    </tbody>
-                </table>
-
-                <form action="" method="POST">
-                    <button title="Notifications" name="notifs" type="submit">View All</button>
-                </form>
+                    <?php include"admin/viewreport_table.php"; ?>
             </div>
 
         </div>
        
         <a href="logout.php" class="logout" title="logout"></a>
     </div>
+
     <div class="dashboard-wrapper">
         <strong class="sub-title">EQUIPMENTS STATUS</strong>
         <div class="counter-container">
@@ -59,7 +45,7 @@
                 <label><?php echo $Broken; ?></label>
             </div>
         </div>
-    <?php include"PieChart/pieForm.php"; ?> 
+    <?php include"PieChart/pieForm.php"; ?>
     </div>
 
     <div class="dashboard-wrapper">
@@ -205,7 +191,6 @@
         <th>Manufacturer</th>
         <th>Serial</th>
         <th>Status</th>
-        <th>Condition</th>
         <th>Room</th>
         <th>Building</th>
         <th>Floor</th>

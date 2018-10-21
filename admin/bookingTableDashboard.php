@@ -48,7 +48,9 @@
                 <form action="" method="POST">
                 <td data-th="choice">
                     
-                        <select name="choice">
+                        <select name="choice" required="" style="margin-bottom: 0;
+                        padding: 5px 7px;">
+                            <option value="" hidden>Select</option>
                             <option>Approved</option>
                             <option>Cancel</option>
                         </select>       

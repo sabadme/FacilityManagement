@@ -41,13 +41,12 @@ if ($status == "Admin") {
                     <span>Dashboard</span>
                     </button>
                 </li>
-                  <li>
-                    <button title="Dashboard" type="submit" name="calendarBooking" class="dashboard">
-                    <span>Calendar Booking TRY</span>
+                <li>
+                    <button title="Reported Equipments" type="submit" name="reportedEquipment" class="report">
+                    <span>Reports</span>
                     </button>
                 </li>
-
-
+                
                 <li class="parent">
                     <span class="scanner">Booking</span>
                     <ul>
@@ -55,6 +54,12 @@ if ($status == "Admin") {
                             <button title="Booking" class="booking" name="booking" type="submit">Book</button>
                             <span id="bok_count"  class="counter"></span>
                         </li>
+                        <li>
+                            <button title="Dashboard" type="submit" name="calendarBooking" class="dashboard">
+                            <span>Calendar</span>
+                            </button>
+                        </li>
+                        <li><button name="book-finished" style="color:yellow;">History</button></li>                       
                         <li class="parent">
                             <span class="booking">Book List</span>
                             <ul>
@@ -62,7 +67,6 @@ if ($status == "Admin") {
                                 <li><button name="book-pending">Pending</button></li>
                                 <li><button name="book-approved">Approved</button></li>
                                 <li><button name="book-ongoing">On-Going</button></li>
-                                <li><button name="book-finished" style="color:yellow;">History</button></li>
                             </ul>
                         </li>
                     </ul>
@@ -74,6 +78,11 @@ if ($status == "Admin") {
                     </span>
 
                     <ul>    
+                            <li>
+                                <button title="Equipment History" type="submit" name="equipmenthistoy" class="reportedequipment">
+                                <span>Activity</span>
+                                </button>
+                            </li>
                             <li><button><span>Masterlist</span></button></li>
                             <li><button title="Single Equipment" class="single" name="single_equipment" type="submit"><span>Add Equipment</span></button></li>
 
@@ -135,17 +144,7 @@ if ($status == "Admin") {
                     <span>Assigned Room</span>
                     </button>
                 </li>-->
-                <li>
-                    <button title="Reported Equipments" type="submit" name="reportedEquipment" class="reportedequipment">
-                    <span>Reported Equipments</span>
-                    </button>
-                </li>
-
-                <li>
-                    <button title="Equipment History" type="submit" name="equipmenthistoy" class="reportedequipment">
-                    <span>Equipment History</span>
-                    </button>
-                </li>
+                
 
             </ul>
         </form>

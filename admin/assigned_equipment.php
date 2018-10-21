@@ -58,7 +58,7 @@
 
                 <table id='myTable'>
                     <thead>
-                    <th></th>
+                    <th>Image</th>
                     <th>Name</th>
                     <th>Status</th>
                     </thead>

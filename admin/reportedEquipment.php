@@ -2,15 +2,45 @@
 include"admin/connection.php";
 
 ?>
+<div class="report-container">
+	<div class="top-container">
+        <strong>Reported Equipments</strong>
+        <div class="notifs-container">
+            <strong id="adminNotifHide" class="notifs"></strong>
+            <span id="count" class="counter"></span>
+
+            <div class="notifs-wrapper">
+                <strong>Notifications</strong>
+
+                <table id="myTable">
+                    <thead>
+                        <th>Name</th>
+                        <th>Equipment</th>
+                        <th>Message</th>
+                    </thead>
+
+                    <tbody>
+                        <?php include"admin/viewreport_table.php"; ?>
+                    </tbody>
+                </table>
+
+                <form action="" method="POST">
+                    <button title="Notifications" name="notifs" type="submit">View All</button>
+                </form>
+            </div>
+
+        </div>
+        <a href="logout.php" class="logout"></a>
+	</div>
 <table>
 	<thead>
 		<tr>
-		<th></th>
+		<th>Image</th>
 		<th>Name</th>
-		<th>Equipment Name</th>
-		<th>Equipment Code</th>
-		<th>Essential</th>
-		<th></th>
+		<th>EQ Name</th>
+		<th>EQ Code</th>
+		<th>Priority</th>
+		<th>Action</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -39,12 +69,12 @@ if($equipmentStatus == "High Priority"){
 ?>	
 	
 		<tr>
-		<td><?php echo "<img style='width: 50px; height: 50px' src='EquipmentPicture/" . $equipmentFilename . "'>" ?></td>
-		<td><?php echo $userName; ?></td>
-		<td><?php echo $equipmentName; ?></td>
-		<td><?php echo $dataEquipment['equipment_code']; ?></td>
-		<td><?php echo $equipmentStatus;?></td>
-		<td>
+		<td data-th="Image"><?php echo "<img style='width: 100px;' src='EquipmentPicture/" . $equipmentFilename . "'>" ?></td>
+		<td data-th="User"><?php echo $userName; ?></td>
+		<td data-th="Equipment"><?php echo $equipmentName; ?></td>
+		<td data-th="QR ID"><?php echo $dataEquipment['equipment_code']; ?></td>
+		<td data-th="Priority"><?php echo $equipmentStatus;?></td>
+		<td data-th="Action">
 			<form action="" method="POST">	
 				<button name="viewEquipmentReport" type="submit" value="<?php echo $userID; ?>">View</button>
 			</form>
@@ -57,5 +87,6 @@ if($equipmentStatus == "High Priority"){
 ?>
 </tbody>
 </table>
+</div>
 <?php
 ?>

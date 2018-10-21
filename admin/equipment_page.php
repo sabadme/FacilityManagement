@@ -57,7 +57,27 @@ if(isset($_REQUEST['equipmentPage'])){
 	<div class="EQ-Page">
 		<div class="EQ-Container">
 			<div class="EQ-Img">
-				<?php echo "<img src='EquipmentPicture/" . $image_filename . "'>" ?>
+				<div class="item">
+		            <div class="clearfix" style="max-width:474px;">
+		                <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+		                    <li data-thumb="<?php echo "EquipmentPicture/" . $image_filename ?>">
+		                        <img src="<?php echo "EquipmentPicture/" . $image_filename ?>" />
+		                    </li>
+		                    <li data-thumb="<?php echo "EquipmentPicture/" . $image_filename ?>">
+		                        <img src="<?php echo "EquipmentPicture/" . $image_filename ?>" />
+		                    </li>
+		                    <li data-thumb="<?php echo "EquipmentPicture/" . $image_filename ?>">
+		                        <img src="<?php echo "EquipmentPicture/" . $image_filename ?>" />
+		                    </li>
+		                    <li data-thumb="<?php echo "EquipmentPicture/" . $image_filename ?>">
+		                        <img src="<?php echo "EquipmentPicture/" . $image_filename ?>" />
+		                    </li>
+		                    <li data-thumb="<?php echo "EquipmentPicture/" . $image_filename ?>">
+		                        <img src="<?php echo "EquipmentPicture/" . $image_filename ?>" />
+		                    </li>
+		                </ul>
+		            </div>
+		        </div>
 			</div>
 			<div class="EQ-Date">
 				<div>
@@ -81,7 +101,6 @@ if(isset($_REQUEST['equipmentPage'])){
 			$data_booking = mysql_fetch_array($sql_booking);
 			$equipmentBooking_ID = $data_booking['equipment'];
 			$venue = $data_booking['venue'];
-			echo "&nbsp&nbsp";
 
 			if($equipmentID == $equipmentBooking_ID){
 			echo $venue;	
@@ -130,7 +149,11 @@ $yearuseStart = new DateTime($dateStart);
 
 		 ?>
 		
-		<meter value="<?php echo $gaugeValue; ?>" min="0" max="100">2 out of 10</meter>
+		<div class="meter-container">
+			<span>Durability:</span>
+			<meter value="<?php echo $gaugeValue; ?>" min="0" max="100"><span></span></meter>
+		</div>
+
 		<span>Room: <?php echo $roomNames;?> </span>
 		<span>Building: <?php echo $building;?> </span>
 		<span>Floor: <?php echo $floor;?> </span>
@@ -148,3 +171,24 @@ $yearuseStart = new DateTime($dateStart);
 	
 }
 ?>
+<!-- <script>
+	var value = $(".meter-container meter").attr('value');
+	var content = $(".meter-container meter span");
+
+	console.log(content);
+
+    if (value >= 0) {
+
+        $(content).css({"background-color": "red", "width": value});
+    }
+
+   	if (value >= 30) {
+
+        $(content).css({"background-color": "yellow", "width": value});
+    }
+
+   	if (value >= 50) {
+
+        $(content).css({"background-color": "green", "width": value});
+    }
+</script> -->

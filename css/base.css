@@ -202,6 +202,7 @@ button:not(.equipment-name) {
   max-width: 150px;
   font-family: 'Oswald-reg';
   letter-spacing: 1px;
+  border-radius: 5px;
 }
 button:not(.equipment-name):focus {
   outline: none;
@@ -246,6 +247,10 @@ button.equipment-name {
 button.equipment-name:hover {
   color: #283142;
 }
+button.equipment-name:focus {
+  outline: none;
+  color: #283142;
+}
 form input {
   display: block;
   padding: 10px;
@@ -273,7 +278,7 @@ thead {
 }
 tbody {
   display: block;
-  max-height: 300px;
+  max-height: 420px;
   overflow-y: auto;
 }
 tbody::-webkit-scrollbar {
@@ -295,11 +300,18 @@ tbody tr {
   width: 100%;
   table-layout: fixed;
 }
-th,
-td {
+th {
   padding: 8px;
   text-align: center;
   font-size: 1.0714285714285714rem;
+  text-transform: capitalize;
+  font-family: 'Oswald-reg';
+  vertical-align: middle;
+}
+td {
+  padding: 8px;
+  text-align: center;
+  font-size: 0.8571428571428571rem;
   text-transform: capitalize;
   font-family: 'Oswald-reg';
   vertical-align: middle;
@@ -342,7 +354,7 @@ select:focus {
 .title {
   display: block;
   font-family: 'Oswald-reg';
-  font-size: 2.142857142857143rem;
+  font-size: 1.4285714285714286rem;
   color: #000;
   text-transform: uppercase;
   max-width: 1230px;
@@ -415,7 +427,7 @@ select:focus {
     font-size: 13px;
   }
 }
-@media all and (max-width: 679px) {
+@media all and (max-width: 768px) {
   :root {
     font-size: 15px;
   }

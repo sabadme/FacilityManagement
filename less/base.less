@@ -136,6 +136,7 @@ button {
         max-width: 150px;
         font-family: @font-family-base;
         letter-spacing: 1px;
+        border-radius: 5px;
 
         &:focus {
             outline: none;
@@ -190,6 +191,11 @@ button {
         &:hover {
             color: @cobalt;
         }
+
+        &:focus {
+            outline: none;
+            color: @cobalt;
+        }
     }
 }
 
@@ -231,7 +237,7 @@ thead {
 tbody {
     .custom-scrollbar();
     display: block;
-    max-height: 300px;
+    max-height: 420px;
     overflow-y: auto;
 }
 
@@ -241,10 +247,19 @@ thead, tbody tr {
     table-layout:fixed;
 }
 
-th, td {
+th {
     padding: 8px;
     text-align: center;
     .font-size(15);
+    text-transform: capitalize;
+    font-family: @font-family-base;
+    vertical-align: middle;
+}
+
+td {
+    padding: 8px;
+    text-align: center;
+    .font-size(12);
     text-transform: capitalize;
     font-family: @font-family-base;
     vertical-align: middle;
@@ -295,7 +310,7 @@ select {
 .title {
     display: block;
     font-family: @font-family-base;
-    .font-size(30);
+    .font-size(20);
     color: @color-black;
     text-transform: uppercase;
     max-width: @page-max_width;
@@ -382,7 +397,7 @@ select {
     }
 }
 
-@media all and (max-width : 679px) {
+@media all and (max-width : 768px) {
 	@root-font_size: 15;
 
     :root {
