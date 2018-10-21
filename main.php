@@ -203,4 +203,3 @@ if(isset($status)){
     });
 
 </script>
-<script type="text/javascript" src="js/monitoring.js"></script>
