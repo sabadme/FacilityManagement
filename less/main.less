@@ -1,0 +1,132 @@
+@import "variable.less";
+
+
+.main-index  {
+
+	header, footer {
+		display: none;
+	}
+
+	.page-main-inner {
+	    padding: 70px 20px 0;
+	}
+
+	.top-container {
+		.flex-layout;
+		.flex-align(center);
+		postion: relative;
+		width: 100%;
+		margin-bottom: 40px;
+   		padding-bottom: 20px;
+   		border-bottom: 1px solid #ccc;
+
+   		.notifs-container {
+   			position: relative;
+   		}
+
+   		& > span {
+			.font-size(15);
+			font-family: @font-family-base;
+			text-transform: capitalize;
+			margin-right: 15px;
+		}
+
+
+		& > strong {
+			.font-size(30);
+			.flex-grow(1);
+			font-family: @font-family-base;
+			text-transform: uppercase;
+		}
+
+		.counter {
+			.font-size(10);
+			color: @white;
+		    padding: 3px 5px;
+		    line-height: 1;
+		    display: inline-block;
+		    background: @torch-red;
+		    border-radius: 25px;
+		    position: absolute;
+		    top: -10px;
+		    right: 10px;
+		}
+
+		.logout {
+			&:after {
+				content: @logout-icon;
+			    display: inline-block;
+			    font-family: @font-monitoring-icon;
+			    .font-size(20);
+			    color: @mine-shaft;
+			    vertical-align: middle;
+			    background: @white;
+			    margin-left: 10px;
+			}
+
+			&:hover:after {
+				opacity: 0.8;
+			}
+		}
+
+		.notifs {
+			&:hover {
+				opacity: 0.9;
+			}
+
+			&:before {
+				content: @notifs-icon;
+			    display: inline-block;
+			    font-family: @font-monitoring-icon;
+			    .font-size(20);
+			    color: @mine-shaft;
+			    vertical-align: middle;
+			    background: @white;
+			    cursor: pointer;
+			}
+
+			&.active ~ .notifs-wrapper {
+				display: block;
+			    position: absolute;
+			    right: 52px;
+			    top: 50px;
+			    width: 100%;
+			    max-width: 322px;
+			    background: @white;
+			    border: 1px solid #ccc;
+			}
+
+			&-container {
+				& > .notifs-wrapper {
+					display: none;
+
+					& > strong {
+						.font-size(16);
+						display: block;
+    					padding: 10px;
+					    text-transform: uppercase;
+					    border-bottom: 1px solid #ccc;
+					    font-family: @font-family-base;
+					    border-bottom: 1px solid #ccc;
+					}
+
+					button {
+						max-width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media all and (max-width : 679px) {
+	.main-index {
+		.top-container {
+			margin-bottom: 30px;
+
+			& > strong {
+				.font-size(18);
+			}
+		}
+	}
+}

@@ -1,0 +1,176 @@
+@import "variable.less";
+
+.accounts-container {
+	padding: 20px;
+  width: 100%;
+
+  .top-container {
+    strong {
+      .font-size(18);
+    }
+  }
+
+	.search {
+		float: right;
+		margin-bottom: 20px;
+	}
+
+	.box-container {
+		clear: right;
+        padding: 20px;
+        border: 1px solid @border-color;
+        margin-bottom: 30px;
+    }
+
+    .table-container {
+      .teacherUpdates {
+        max-width: 110px;
+        .font-size(12);
+      }
+    }
+
+    .user-box {
+       .flex-layout;
+
+        span {
+	       .font-size(13);
+	       display: inline-block;
+	       font-family: sans-serif;
+	       margin-bottom: 5px;
+        }
+
+        div {
+           width: 50%;
+           margin-right: 20px;
+
+           &:last-child {
+           		margin-right: 0;
+           }
+        }
+    }
+}
+
+@media only screen and (max-device-width : 375px) {
+
+.accounts-container { 
+
+    .box-container {
+      .user-box{
+        display: block;
+
+        .user-box-input{
+          width: 100%;
+        }
+      }
+    }
+
+    .openOfficeUpdateModal {
+        .font-size(12);
+        max-width: 110px;
+    }
+
+    .search {
+      max-width: 100%;
+    }
+
+    #myTable1 {
+      table, thead, tbody, th, td, tr { 
+          display: block; 
+        }
+        
+        /* Hide table headers (but not display: none;, for accessibility) */
+        thead tr { 
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+        }
+        
+        tr { 
+          border: 1px solid #ccc;
+          padding: 10px; 
+        }
+        tr:nth-child(even) {
+          background-color: #f2f2f2;
+          border: 1px solid #fff;
+        }
+        
+        td { 
+          /* Behave  like a "row" */
+          border: none;
+          border-bottom: 1px solid #eee; 
+          position: relative;
+          padding-left: 50%; 
+        }
+        
+        td:before { 
+          /* Now like a table header */
+          position: absolute;
+          /* Top/left values mimic padding */
+          top: 6px;
+          left: 6px;
+          width: 45%; 
+          padding-right: 10px; 
+          white-space: nowrap;
+        }
+
+        td:nth-of-type(1):before { content: "First Name: "; }
+        td:nth-of-type(2):before { content: "Middle Name: "; }
+        td:nth-of-type(3):before { content: "Last Name: "; }
+        td:nth-of-type(4):before { content: "Position: "; }
+        td:nth-of-type(5):before { content: "Status: "; }
+        td:nth-of-type(6):before { content: "Action: "; }
+        td:nth-of-type(7):before { content: "Action: "; }
+        td:nth-of-type(8):before { content: "Action: "; }      
+    }
+
+    #myTable2 {
+
+
+      table, thead, tbody, th, td, tr { 
+        display: block; 
+      }
+      
+      /* Hide table headers (but not display: none;, for accessibility) */
+      thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+      
+      tr { 
+        border: 1px solid #ccc;
+        padding: 10px; 
+      }
+      tr:nth-child(even) {
+          background-color: #f2f2f2;
+          border: 1px solid #fff;
+        }
+      
+      td { 
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee; 
+        position: relative;
+        padding-left: 50%; 
+      }
+      
+      td:before { 
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%; 
+        padding-right: 10px; 
+        white-space: nowrap;
+      }
+
+      td:nth-of-type(1):before { content: "Office: "; }
+      td:nth-of-type(2):before { content: "Status: "; }
+      td:nth-of-type(3):before { content: "E / D: "; }
+      td:nth-of-type(4):before { content: "Add: "; }
+      td:nth-of-type(5):before { content: "Equipments: "; }
+      td:nth-of-type(6):before { content: "Edit: "; }    
+    } 
+  }
+}

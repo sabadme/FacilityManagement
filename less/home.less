@@ -1,0 +1,128 @@
+@import "variable.less";
+
+.home-index {	
+	header {
+		background: @white;
+		border-bottom: 1px solid @sail;
+
+		.logo-container span {
+			color: @cobalt;
+		}
+
+		.login-container  {
+			.flex-layout;
+			.flex-align(center);
+
+			.login {
+				border-right: 0;
+			}
+		}	
+	}
+
+	.aboutus {
+		padding: 30px;
+		h1 {
+			text-transform: uppercase;
+			font-family: @font-family-base;
+			line-height: 1;
+			font-weight: 600;
+			padding: 20px 0;
+		}
+
+		p {
+			text-align: justify;
+			padding: 20px 0;
+	    	line-height: 1.4;
+	    	.font-size(18);
+	    	font-family: @font-family-base;
+		}
+	}
+
+	.whats-container {
+		padding: 30px;
+
+		h1 {
+			text-transform: uppercase;
+			font-family: @font-family-base;
+			line-height: 1;
+			font-weight: 600;
+		}
+	}
+
+	.banner-home img {
+		width: 100%;
+	}
+
+	.page-text-container {
+		max-width: @page-max_width;
+		margin: 0 auto;
+		padding-top: 30px;
+		.flex-layout;
+
+		.page-text {	
+			max-width: 33.33%;
+			margin: 0 auto 50px;
+			text-align: center;	
+
+			img {
+				max-width: 250px;
+				width: 100%;
+				height: 250px;
+				margin-bottom: 20px;
+				padding: 10px;
+			}
+
+			div	{
+				span {
+					font-family: @font-family-base;
+					text-transform: capitalize;
+					.font-size(22);
+					display: block;
+					margin-bottom: 15px;
+					font-weight: 600;
+				}
+
+				p {
+					font-family: @font-family-base;
+					text-transform: capitalize;
+					.font-size(15);
+					padding: 14px;
+					line-height: 1.4;
+				}
+			}
+		}	
+	}
+}
+
+
+@media only screen and (max-device-width : 640px) {
+
+	.home-index {
+		header {
+			.login-container {
+				position: relative;
+				padding: 30px 10px;
+    			.flex-justify-content(center);
+    			border-top: 1px solid @mine-shaft;
+
+    			.login, a {
+    				&.active + .login-form-container {
+					    width: 100%;
+					    min-height: auto;
+					    padding: 30px 20px;
+					    top: 77px;
+					    border-top: 1px solid @mine-shaft;
+    				}
+    			}
+			}
+		}
+
+		.page-text-container {
+			.flex-direction(column);
+
+			.page-text {
+				max-width: 100%;
+			}
+		}
+	}
+}
