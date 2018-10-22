@@ -2,7 +2,7 @@
    session_start();
    
    if(session_destroy()) {
-      header("Location:/MonitoringSystem/home.php");
+      header("Location:/FacilityManagement/FacilityManagement/home.php");
    }
    exit();
 ?>

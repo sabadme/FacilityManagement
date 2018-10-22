@@ -21,22 +21,7 @@ include"admin/generate_code.php";
 
             <div class="notifs-wrapper">
                 <strong>Notifications</strong>
-
-                <table id="myTable">
-                    <thead>
-                        <th>Name</th>
-                        <th>Equipment</th>
-                        <th>Message</th>
-                    </thead>
-
-                    <tbody>
-                        <?php include"admin/viewreport_table.php"; ?>
-                    </tbody>
-                </table>
-
-                <form action="" method="POST">
-                    <button title="Notifications" name="notifs" type="submit">View All</button>
-                </form>
+                    <?php include"admin/viewreport_table.php"; ?>
             </div>
 
         </div>

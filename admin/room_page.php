@@ -31,9 +31,23 @@ if($image==$file_name){
 
 <div class="accounts-container">
     <div class="top-container">
-            <strong>Room: <?php echo $roomName; ?></strong>
-            <a href="logout.php" class="logout"></a>
+        <strong>Room: <?php echo $roomName; ?></strong>
+        
+        <div class="notifs-container">
+            <strong id="adminNotifHide" class="notifs"></strong>
+            <span id="count" class="counter"></span>
+
+            <div class="notifs-wrapper">
+                <strong>Notifications</strong>
+                    <?php include"admin/viewreport_table.php"; ?>
+            </div>
+
+        </div>
+       
+       
+        <a href="logout.php" class="logout" title="logout"></a>
     </div>
+
 
     <div class="product-page-container">
     <!-- <div class="product-banner-container">
