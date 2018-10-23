@@ -8,11 +8,10 @@
 
             <div class="notifs-wrapper">
                 <strong>Notifications</strong>
-                    <?php include"admin/viewreport_table.php"; ?>
+                    <?php include"admin/viewreport_table.php"; ?>                
             </div>
 
         </div>
-       
        
         <a href="logout.php" class="logout" title="logout"></a>
     </div>
@@ -46,7 +45,8 @@
                 <label><?php echo $Broken; ?></label>
             </div>
         </div>
-    <?php include"PieChart/pieForm.php"; ?>
+
+        <?php include "PieChart/pieForm.php"; ?>
     </div>
 
     <div class="dashboard-wrapper">

@@ -7,10 +7,11 @@
             <strong id="adminNotifHide" class="notifs"></strong>
             <span id="count" class="counter"></span>
 
-           <div class="notifs-wrapper">
-            <strong>Notifications</strong>
-                <?php include"admin/viewreport_table.php"; ?>
+            <div class="notifs-wrapper">
+                <strong>Notifications</strong>
+                    <?php include"admin/viewreport_table.php"; ?>                
             </div>
+
         </div>
         <a href="logout.php" class="logout"></a>
     </div>

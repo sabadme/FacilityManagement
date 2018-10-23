@@ -9,23 +9,8 @@
 
 
         <div class="notifs-wrapper">
-            <strong >Notifications</strong>
-
-            <table id="myTable">
-                <thead>
-                        <th>Venue</th>
-                        <th>Date Start</th>
-                        <th>Date End</th>
-                </thead>
-
-                <tbody>
-                    <?php include"teacher/sbookingApproved.php"; ?>
-                </tbody>
-            </table>
-
-            <form action="" method="POST">
-                <button title="Notifications" name="notifs" type="submit">View All</button>
-            </form>
+                <strong>Notifications</strong>
+                    <?php include"admin/viewreport_table.php"; ?>                
         </div>
 
     </div>
@@ -79,7 +64,7 @@
                    <input type="text" id="Search" onkeyup="myFunction()" placeholder="Search" class="search">
                 <div class="equipments-wrapper">
                     <table id="myTable">
-                        <thead>
+                        <thead> 
                             <tr>
                                 <th>Name</th>
                                 <th>Code</th>
@@ -92,10 +77,10 @@
                         <tbody>
                             <?php
                             include "admin/connection.php";
-
+                            
                             if (!empty('div')){
                             $equipment_sql = mysql_query("SELECT * FROM equipment ORDER BY id desc");
-                            while ($data_equipment = mysql_fetch_array($equipment_sql)) {
+                            while ($data_equipment = mysql_fetch_array($equipment_sql)) {   
                                 $status=$data_equipment['status'];
                                 $equipment_name=$data_equipment['equipment_name'];
 
@@ -114,9 +99,9 @@
                                     <td data-th="Date"><?php echo $data_equipment['equipment_end'];?></td>
                                     <td data-th="Action"><input type="checkbox" name="equipment[]" id="<?php echo $data_equipment['id']; ?>" value="<?php echo $data_equipment['id']; ?>"/></td>
                                 </tr>
+                              
 
-
-
+                         
 
                                 <?php
                             }
@@ -126,7 +111,7 @@
                                 echo "sdadsd";
                             }
 
-
+                            
 
                             ?>
                             </tbody>

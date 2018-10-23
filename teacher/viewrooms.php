@@ -1,38 +1,21 @@
 <?php 
 if(isset($_REQUEST['viewrooms'])){
-	$viewrooms=$_REQUEST['viewrooms']
+	echo $viewrooms=$_REQUEST['viewrooms']
 
  ?>
 
-<div class="manage-container">
+<div class="manage-container with-banner">
 	<div class="top-container">
     <strong>ROOMS</strong>
-    <span><?php echo $data_teacherName['account']; ?></span>
 
     <div class="notifs-container">
        <strong class="notifs" value="<?php echo $accountname; ?>" id="valueNotif"></strong>
         <span id="teacherBookingApproved" class="counter"></span>
 
         <div class="notifs-wrapper">
-            <strong>Notifications</strong>
-
-            <table id="myTable">
-                <thead>
-                     <th>Venue</th>
-                     <th>Date Start</th>
-                     <th>Date End</th>
-                </thead>
-
-                <tbody>
-                   <?php include"teacher/sbookingApproved.php"; ?>
-                </tbody>
-            </table>
-
-            <form action="" method="POST">
-                <button title="Notifications" name="notifs" type="submit">View All</button>
-            </form>
+                <strong>Notifications</strong>
+                    <?php include"admin/viewreport_table.php"; ?>                
         </div>
-
     </div>
     <a href="logout.php" class="logout"></a>
 </div>

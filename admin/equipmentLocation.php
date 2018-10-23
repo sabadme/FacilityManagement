@@ -38,9 +38,10 @@ if(isset($_REQUEST['equipmentLocation'])){
         <span id="count" class="counter"></span>
 
         <div class="notifs-wrapper">
-            <strong>Notifications</strong>
-                <?php include"admin/viewreport_table.php"; ?>
+                <strong>Notifications</strong>
+                    <?php include"admin/viewreport_table.php"; ?>                
         </div>
+
     </div>
     <a href="logout.php" class="logout"></a>
 </div>

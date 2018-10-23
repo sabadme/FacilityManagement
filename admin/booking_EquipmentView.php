@@ -42,8 +42,8 @@ if(isset($_REQUEST['equipmentBookingView'])){
 
 
         <div class="notifs-wrapper">
-            <strong>Notifications</strong>
-                <?php include"admin/viewreport_table.php"; ?>
+                <strong>Notifications</strong>
+                    <?php include"admin/viewreport_table.php"; ?>                
         </div>
 
     </div>
@@ -55,23 +55,8 @@ if(isset($_REQUEST['equipmentBookingView'])){
         <span id="count" class="counter"></span>
 
         <div class="notifs-wrapper">
-            <strong>Notifications</strong>
-
-            <table id="myTable">
-                <thead>
-                    <th>Name</th>
-                    <th>Equipment</th>
-                    <th>Message</th>
-                </thead>    
-
-                <tbody>
-                    <?php include"admin/viewreport_table.php"; ?>
-                </tbody>
-            </table>
-
-            <form action="" method="POST">
-                <button title="Notifications" name="notifs" type="submit">View All</button>
-            </form>
+                <strong>Notifications</strong>
+                    <?php include"admin/viewreport_table.php"; ?>                
         </div>
 
     </div>
@@ -83,25 +68,9 @@ if(isset($_REQUEST['equipmentBookingView'])){
         <span id="teacherBookingApproved" class="counter"></span>
 
         <div class="notifs-wrapper">
-            <strong>Notifications</strong>
-
-            <table id="myTable">
-                <thead>
-                     <th>Venue</th>
-                     <th>Date Start</th>
-                     <th>Date End</th>
-                </thead>
-
-                <tbody>
-                    <?php include"teacher/sbookingApproved.php"; ?>
-                </tbody>
-            </table>
-
-            <form action="" method="POST">
-                <button title="Notifications" name="notifs" type="submit">View All</button>
-            </form>
+                <strong>Notifications</strong>
+                    <?php include"admin/viewreport_table.php"; ?>                
         </div>
-
     </div>
             <?php
         }
@@ -217,23 +186,8 @@ if(isset($_REQUEST['equipmentBookingView'])){
 
 
         <div class="notifs-wrapper">
-            <strong >Notifications</strong>
-
-            <table id="myTable">
-                <thead>
-                        <th>Venue</th>
-                        <th>Date Start</th>
-                        <th>Date End</th>
-                </thead>
-
-                <tbody>
-                    <?php include"Office/bookingApproved.php"; ?>
-                </tbody>
-            </table>
-
-            <form action="" method="POST">
-                <button title="Notifications" name="notifs" type="submit">View All</button>
-            </form>
+                <strong>Notifications</strong>
+                    <?php include"admin/viewreport_table.php"; ?>                
         </div>
 
     </div>
@@ -245,23 +199,8 @@ if(isset($_REQUEST['equipmentBookingView'])){
         <span id="count" class="counter"></span>
 
         <div class="notifs-wrapper">
-            <strong>Notifications</strong>
-
-            <table id="myTable">
-                <thead>
-                    <th>Name</th>
-                    <th>Equipment</th>
-                    <th>Message</th>
-                </thead>    
-
-                <tbody>
-                    <?php include"admin/viewreport_table.php"; ?>
-                </tbody>
-            </table>
-
-            <form action="" method="POST">
-                <button title="Notifications" name="notifs" type="submit">View All</button>
-            </form>
+                <strong>Notifications</strong>
+                    <?php include"admin/viewreport_table.php"; ?>                
         </div>
 
     </div>
@@ -273,23 +212,8 @@ if(isset($_REQUEST['equipmentBookingView'])){
         <span id="teacherBookingApproved" class="counter"></span>
 
         <div class="notifs-wrapper">
-            <strong>Notifications</strong>
-
-            <table id="myTable">
-                <thead>
-                     <th>Venue</th>
-                     <th>Date Start</th>
-                     <th>Date End</th>
-                </thead>
-
-                <tbody>
-                    <?php include"teacher/sbookingApproved.php"; ?>
-                </tbody>
-            </table>
-
-            <form action="" method="POST">
-                <button title="Notifications" name="notifs" type="submit">View All</button>
-            </form>
+                <strong>Notifications</strong>
+                    <?php include"admin/viewreport_table.php"; ?>                
         </div>
 
     </div>

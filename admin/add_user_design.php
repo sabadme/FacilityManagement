@@ -7,9 +7,9 @@
             <span id="count" class="counter"></span>
 
             <div class="notifs-wrapper">
-            	<strong>Notifications</strong>
-                <?php include"admin/viewreport_table.php"; ?>
-        	</div>
+                <strong>Notifications</strong>
+                    <?php include"admin/viewreport_table.php"; ?>                
+			</div>
 
         </div>
         <a href="logout.php" class="logout"></a>
@@ -58,9 +58,9 @@
 					<th>Last Name</th>
 					<th>Position</th>
 					<th>Status</th>
-					<th>Action</th>
-                    <th>Action</th>
-                    <th>Action</th>
+					<th></th>
+                    <th></th>
+                    <th></th>
 				</thead>
 
 				<tbody>

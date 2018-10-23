@@ -59,25 +59,9 @@ include"admin/connection.php";
         <span id="teacherBookingApproved" class="counter"></span>
 
         <div class="notifs-wrapper">
-            <strong>Notifications</strong>
-
-            <table id="myTable">
-                <thead>
-                        <th>Venue</th>
-                        <th>Date Start</th>
-                        <th>Date End</th>
-                </thead>
-
-                <tbody>
-                    <?php include"teacher/sbookingApproved.php"; ?>
-                </tbody>
-            </table>
-
-            <form action="" method="POST">
-                <button title="Notifications" name="notifs" type="submit">View All</button>
-            </form>
+                <strong>Notifications</strong>
+                    <?php include"admin/viewreport_table.php"; ?>                
         </div>
-
     </div>
     <a href="logout.php" class="logout"></a>
 </div>

@@ -6,14 +6,14 @@
             <span id="count" class="counter"></span>
 
             <div class="notifs-wrapper">
-            <strong>Notifications</strong>
-                <?php include"admin/viewreport_table.php"; ?>
+                <strong>Notifications</strong>
+                    <?php include"admin/viewreport_table.php"; ?>                
             </div>
 
         </div>
         <a href="logout.php" class="logout"></a>
     </div>
-    <div class="booking-table">
+    <div>
 
     <table id="myTable">
     <thead>

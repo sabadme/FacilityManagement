@@ -28,24 +28,9 @@ $dataAccount = mysql_fetch_array($sqlAccount);
 	        <span id="count" class="counter"></span>
 
 	        <div class="notifs-wrapper">
-	            <strong>Notifications</strong>
-
-	            <table id="myTable">
-	                <thead>
-	                    <th>Name</th>
-	                    <th>Equipment</th>
-	                    <th>Message</th>
-	                </thead>    
-
-	                <tbody>
-	                    <?php include"admin/viewreport_table.php"; ?>
-	                </tbody>
-	            </table>
-
-	            <form action="" method="POST">
-	                <button title="Notifications" name="notifs" type="submit">View All</button>
-	            </form>
-	        </div>
+                <strong>Notifications</strong>
+                    <?php include"admin/viewreport_table.php"; ?>                
+        	</div>
 
 	    </div>
 	    <a href="logout.php" class="logout"></a>
@@ -187,8 +172,8 @@ $dataAccount = mysql_fetch_array($sqlAccount);
 		<option>Fixed</option>
 		<option>Not Fixed</option>
 	</select>
-	<textarea class="textarea" name="commentTechnician" placeholder="Enter message..."></textarea>
-	<button name="technicianReportSend" type="submit" value="<?php echo $equipment_id; ?>" style="margin-top: 10px;">Send</button>
+	<textarea class="textarea" name="commentTechnician"></textarea>
+	<button name="technicianReportSend" type="submit" value="<?php echo $equipment_id; ?>">Send</button>
 	</form>
 	</div>
 	</div>

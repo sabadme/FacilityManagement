@@ -8,8 +8,8 @@
         <span id="count" class="counter"></span>
 
         <div class="notifs-wrapper">
-            <strong>Notifications</strong>
-                <?php include"admin/viewreport_table.php"; ?>
+                <strong>Notifications</strong>
+                    <?php include"admin/viewreport_table.php"; ?>                
         </div>
 
     </div>

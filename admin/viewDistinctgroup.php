@@ -8,7 +8,7 @@
 
             <div class="notifs-wrapper">
                 <strong>Notifications</strong>
-                    <?php include"admin/viewreport_table.php"; ?>
+                    <?php include"admin/viewreport_table.php"; ?>                
             </div>
 
         </div>

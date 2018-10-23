@@ -30,23 +30,8 @@ if(isset($_REQUEST['equipmentLocation'])){
         <span id="count" class="counter"></span>
 
         <div class="notifs-wrapper">
-            <strong>Notifications</strong>
-
-            <table id="myTable">
-                <thead>
-                    <th>Name</th>
-                    <th>Equipment</th>
-                    <th>Message</th>
-                </thead>    
-
-                <tbody>
-                    <?php include"admin/viewreport_table.php"; ?>
-                </tbody>
-            </table>
-
-            <form action="" method="POST">
-                <button title="Notifications" name="notifs" type="submit">View All</button>
-            </form>
+                <strong>Notifications</strong>
+                    <?php include"admin/viewreport_table.php"; ?>                
         </div>
 
     </div>

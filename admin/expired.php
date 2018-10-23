@@ -23,8 +23,8 @@
             <span id="count" class="counter"></span>
 
             <div class="notifs-wrapper">
-            <strong>Notifications</strong>
-                <?php include"admin/viewreport_table.php"; ?>
+                <strong>Notifications</strong>
+                    <?php include"admin/viewreport_table.php"; ?>                
             </div>
 
         </div>
@@ -42,7 +42,7 @@
 
                     <table id='myTable'>
                         <thead>
-                        <th>Image</th>
+                        <th></th>
                         <th>Name</th>
                         <th>Status</th>
                         </thead>
@@ -63,14 +63,9 @@
 
                                 ?>
                                 <tr>
-                                    <td data-th="Image"><?php echo "<img style='width: 150px;' src='EquipmentPicture/" . $image_filename . "'>" ?></td>
-
-                                    <td data-th="Equipment">
-                                        <form action="" method="POST">
-                                            <button class="equipment-name" title="<?php echo $data_equipment['equipment_name']; ?>" name="equipmentPage" value="<?php echo $data_equipment['id']; ?>"><?php echo $data_image['equipment_name']; ?></button>
-                                        </form>
-                                    </td>
-                                    <td data-th="Status"><?php echo $data_image['equipment_status']; ?></td>
+                                    <td><?php echo "<img style='width: 50px; height: 50px' src='EquipmentPicture/" . $image_filename . "'>" ?></td>
+                                    <td><?php echo $data_image['equipment_name']; ?></td>
+                                    <td><?php echo $data_image['equipment_status']; ?></td>
                                 </tr>
                                 <?php
 

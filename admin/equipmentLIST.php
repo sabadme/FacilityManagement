@@ -95,7 +95,7 @@ while($dataEquipment = mysql_fetch_array($sqlEquipment)){
 
 		 <td data-th="Select">
 		 	<form action="" method="POST">
-		 		<select name="statusEquipment"
+		 		<select name="statusEquipment" 
 		 		style= "margin-bottom: 0;
 		 		    	padding: 5px 7px;">
 
@@ -132,7 +132,7 @@ function showDivs(n) {
   for (i = 0; i < x.length; i++) {
      x[i].style.display = "none";  
   }
-  x[slideIndex-1].css('display', 'block');
+  x[slideIndex-1].css('display', 'block'); 
 }
 </script>
 
@@ -148,7 +148,7 @@ function carousel() {
     }
     slideIndex2++;
     if (slideIndex2 > x.length) {slideIndex2 = 1} 
-    x[slideIndex2-1].css('display', 'block');
+    x[slideIndex2-1].css('display', 'block'); 
     setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 </script> -->
